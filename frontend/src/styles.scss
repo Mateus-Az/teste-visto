@@ -1,0 +1,109 @@
+@import 'styles/variables/colors';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+
+  button {
+    border-radius: 0.4rem !important;
+    background-color: rgba(0, 0, 0, 0.400) !important;
+    color: white !important;
+  }
+
+  ::ng-deep .mat-button-toggle-group-appearance-standard .mat-pseudo-checkbox {
+    --mat-minimal-pseudo-checkbox-selected-checkmark-color: white !important;
+  }
+
+}
+
+
+/* Change the border color */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Change the border width */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-width: 1.5px !important;
+}
+
+/* Change the border focused color */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+  border-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Change the border hover color */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+
+.mat-mdc-paginator-touch-target,
+.mat-mdc-select .mat-mdc-select-trigger {
+  color: white;
+}
+
+
+
+.custom-dialog {
+
+
+  .mat-mdc-dialog-surface {
+    background: transparent !important;
+    border-radius: 0.4rem !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.8) !important
+  }
+}
+
+
+.cancel {
+  background-color: rgba(221, 48, 48, 0.8) !important;
+  border: 1px solid rgba(255, 13, 13, 0.6) !important;
+  box-shadow: 0px 4px 4px rgba(219, 53, 53, 0.25);
+  color: white !important;
+
+  &:hover {
+    background-color: rgba(245, 19, 19, 0.9) !important;
+    border: 1px solid rgba(255, 13, 13, 0.8) !important;
+    box-shadow: 0px 0 9px rgb(217 10 10);
+  }
+}
+
+
+.confirm {
+  &:hover {
+    background-color: rgba(245, 19, 19, 0.9) !important;
+    border: 1px solid rgba(255, 13, 13, 0.8) !important;
+    box-shadow: 0px 0 9px rgb(217 10 10);
+  }
+}
+
+
+.snackbar-success {
+  border-bottom: 3px solid #4CAF50;
+}
+
+.snackbar-error {
+  border-bottom: 3px solid #f44336;
+}
+
+
+
+
+// https://stackademic.com/blog/how-to-customize-mat-form-field-border-color-in-angular-material-v-15

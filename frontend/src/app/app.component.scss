@@ -1,0 +1,130 @@
+:host {
+  display: block;
+  height: auto;
+  min-height: 100dvh;
+  position: relative;
+
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  mat-toolbar,
+  mat-sidenav-container {
+    background: var(--transparent-full) !important;
+    color: var(--primary-text) !important;
+  }
+
+  mat-sidenav {
+    background: var(--primary-bg-black-4);
+  }
+
+  mat-toolbar {
+    border-bottom: 1px solid var(--gray-opacity-20);
+    backdrop-filter: unset !important;
+  }
+
+  mat-sidenav {
+    border-top: var(--transparent-full) !important;
+    border-bottom: var(--transparent-full) !important;
+    box-shadow: none !important;
+    border-right: 1px solid var(--gray-opacity-20);
+
+    ::ng-deep mat-nav-list .mdc-list-item__primary-text {
+      color: var(--primary-text);
+    }
+  }
+
+  app-footer {
+    height: auto;
+    min-height: 4dvh;
+  }
+
+  .menu-item {
+    margin: 1rem 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--primary-text);
+      padding: 0.6rem;
+      margin: 0 0.5rem;
+      border-radius: var(--border-radius-4);
+      border-left: solid 5px transparent;
+
+
+      mat-icon {
+        margin: 0 0.75rem;
+      }
+
+      transition: all 0.3s ease-in-out;
+
+      &.active,
+      &:hover {
+        background: var(--gray-opacity-20);
+        border-left: solid 5px rgba(73, 72, 176, 0.8);
+        box-shadow: var(--primary-shadow);
+        transform: scale(1.025);
+      }
+    }
+  }
+
+
+
+  ::ng-deep mat-sidenav {
+    border-radius: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 95dvh;
+  }
+
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  mat-sidenav {
+    background: var(--primary-bg-black-9) !important;
+    backdrop-filter: var(--blur-5);
+  }
+}

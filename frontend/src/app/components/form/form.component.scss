@@ -1,0 +1,140 @@
+:host {
+  display: block;
+  margin: auto;
+  max-width: 720px;
+  height: auto;
+  padding: 0.4rem;
+
+  form {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: .8rem;
+    border: 1px solid var(--gray-opacity-60);
+    box-shadow: var(--primary-shadow);
+    border-radius: var(--border-radius-4);
+
+    .reset-img {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50% !important;
+      background-color: var(--primary-bg-red) !important;
+      border: var(--border-red-6) !important;
+      box-shadow: var(--primary-shadow-red);
+
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: var(--secondary-bg-red) !important;
+        box-shadow: var(--secondary-shadow-red);
+        transform: scale(1.05);
+      }
+    }
+
+    /* From Uiverse.io by Yaya12085 */
+    .custum-file-upload {
+      height: 200px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: space-between;
+      gap: 20px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed var(--gray-opacity-60);
+      background-color: var(--primary-bg-black-4);
+      padding: 1rem;
+      border-radius: var(--border-radius-6);
+      box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
+    }
+
+    .custum-file-upload .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custum-file-upload .icon svg {
+      height: 80px;
+      fill: var(--primary-text);
+    }
+
+    .custum-file-upload .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custum-file-upload .text span {
+      font-weight: 400;
+      color: var(--text-primary);
+    }
+
+    .custum-file-upload input {
+      display: none;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 2rem;
+
+      button {
+        border: 1px solid var(--gray-opacity-60) !important;
+      }
+    }
+
+
+    mat-form-field {
+      transition: all 0.2s ease-in-out;
+      border-radius: 0.4rem !important;
+      background-color: var(--primary-bg-black-4);
+
+      .mat-mdc-form-field {
+        font-size: 14px;
+        width: 100%;
+
+      }
+
+      &.mat-focused,
+      &:hover {
+        mat-icon {
+          color: var(--text-primary) !important;
+        }
+      }
+
+      mat-icon {
+        color: #313439;
+      }
+
+      input {
+        color: var(--secondary-text);
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  .product-form {
+    .buttons {
+      flex-direction: column;
+      gap: 1rem !important;
+    }
+  }
+}

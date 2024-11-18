@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  width: 100%;
+  background: transparent;
+  border-top: 1px solid var(--gray-opacity-20);
+  color: var(--primary-text);
+  justify-content: flex-end;
+  align-items: center;
+
+  p {
+    margin: 0 2rem 0 0;
+  }
+}
+
+
+@media (max-width: 500px) {
+  p {
+    text-align: center;
+    font-size: 0.8rem !important;
+    margin: 0 0.5rem !important;
+  }
+}

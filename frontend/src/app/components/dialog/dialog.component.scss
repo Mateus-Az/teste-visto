@@ -1,0 +1,16 @@
+:host {
+  h2 {
+    text-align: center;
+    color: var(--primary-text);
+  }
+
+  mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+
+    button {
+      cursor: pointer;
+      border: var(--border-transparent-full);
+    }
+  }
+}

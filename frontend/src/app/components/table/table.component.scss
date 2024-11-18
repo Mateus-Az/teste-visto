@@ -1,0 +1,179 @@
+:host {
+  display: block;
+  height: 100%;
+
+  .search-container {
+    margin-bottom: 1.5rem;
+
+    .options-view {
+      flex-grow: 1;
+
+      mat-button-toggle-group {
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        width: 100%;
+        border-radius: 0.4rem;
+        color: white;
+
+        mat-button-toggle {
+          flex: 1;
+          background-color: rgba(0, 0, 0, 0.400);
+          color: white;
+          padding: 0.5rem;
+        }
+      }
+    }
+
+
+
+    mat-form-field {
+      transition: all 0.2s ease-in-out;
+      width: 75% !important;
+      border-radius: 0.4rem;
+      background-color: rgba(0, 0, 0, 0.400);
+      // border: 1px solid rgba(255, 255, 255, 0.6);
+
+      .mat-mdc-form-field {
+        font-size: 14px;
+        width: 100%;
+
+      }
+
+      &.mat-focused,
+      &:hover {
+        mat-icon {
+          color: white !important;
+        }
+      }
+
+      mat-icon {
+        color: #313439;
+      }
+
+      input {
+        color: white;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+
+    button {
+      width: 15%;
+      height: auto;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+
+    }
+
+    ::ng-deep .mat-button-toggle-group-appearance-standard .mat-pseudo-checkbox {
+      --mat-minimal-pseudo-checkbox-selected-checkmark-color: white !important;
+    }
+
+  }
+
+  table {
+    width: 100%;
+    color: white;
+
+    .actions-table {
+      display: flex;
+
+      button {
+        background: transparent !important;
+        color: white !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform: scale(0.75);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(0.9);
+          color: #b90d07 !important;
+
+        }
+      }
+
+      .edit:hover {
+        color: #2e7d32 !important;
+      }
+    }
+
+    mat-icon {
+      margin-right: 0.5rem;
+    }
+
+    img {
+      width: 100px;
+      height: 80px;
+      border-radius: 0.4rem;
+      object-fit: cover;
+      object-position: center;
+      padding: 0.35rem 0.45rem;
+
+    }
+  }
+
+  td,
+  th {
+    width: auto;
+    color: white;
+  }
+
+  table,
+  mat-paginator {
+    background: transparent;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0.4rem;
+    margin-bottom: 2.4rem;
+    background-color: rgba(0, 0, 0, 0.400);
+
+  }
+}
+
+
+.example-card {
+  max-width: 300px;
+  width: auto;
+  color: white;
+  background: black;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+@media(max-width: 1000px) {
+  .search-container {
+    flex-wrap: wrap !important;
+
+    mat-form-field {
+      flex-grow: 1 !important;
+    }
+
+    .options-view {
+      flex-grow: unset !important;
+    }
+
+    button {
+      flex: 1;
+      padding: 0.6rem;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  ::ng-deep mat-paginator .mat-mdc-paginator-outer-container .mat-mdc-paginator-container {
+    flex-wrap: nowrap !important;
+
+    .mat-mdc-paginator-page-size .mat-mdc-paginator-page-size-label {
+      display: none !important;
+    }
+  }
+}
+
+@media(max-width: 375px) {
+  .options-view {
+    width: 100% !important;
+  }
+}
