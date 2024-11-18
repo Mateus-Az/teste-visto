@@ -21,7 +21,10 @@ public class ProductService {
     private ProductRepository repository;
 
 
-    public Page<ProductDTO> findAllProducts(Pageable pageable) {
+    public Page<ProductDTO> findAllProducts(String name, Pageable pageable) {
+        if (name != null && !name.trim().isEmpty()) {
+            return repository.findByNameContainingIgnoreCase(name, pageable).map(ProductMapper::ConverterToDTO);
+        }
         Page<Product> products = repository.findAll(pageable);
         return products.map(ProductMapper::ConverterToDTO);
     }

@@ -35,9 +35,12 @@ public class ProductController {
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor")
     })
     @GetMapping()
-    public ResponseEntity<Page<ProductDTO>> findAllProducts(@PageableDefault(size = 10, sort = {"name"}, direction = Sort.Direction.ASC)
+    public ResponseEntity<Page<ProductDTO>> findAllProducts(
+            @RequestParam(required = false) String name,
+            @PageableDefault(size = 10, sort = {"name"},
+            direction = Sort.Direction.ASC)
                                                             Pageable paginacao) {
-        return ResponseEntity.status(HttpStatus.OK).body(service.findAllProducts(paginacao));
+        return ResponseEntity.status(HttpStatus.OK).body(service.findAllProducts(name,paginacao));
     }
 
 
